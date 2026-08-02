@@ -27,6 +27,8 @@ window.onload = function () {
     // Hearts Animation
     const hearts = document.getElementById("hearts");
 
+    const petals=document.getElementById("petals");
+    
     setInterval(() => {
 
         const heart = document.createElement("div");
@@ -49,4 +51,23 @@ window.onload = function () {
 
     }, 300);
 
+    setInterval(()=>{
+
+const petal=document.createElement("div");
+
+petal.className="petal";
+
+petal.innerHTML="🌹";
+
+petal.style.left=Math.random()*100+"%";
+
+petal.style.animationDuration=(6+Math.random()*4)+"s";
+
+petals.appendChild(petal);
+
+setTimeout(()=>{
+petal.remove();
+},10000);
+
+},700);
 };
