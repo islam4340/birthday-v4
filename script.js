@@ -9,10 +9,28 @@ window.onload = function () {
     const music = document.getElementById("music");
     const btn = document.getElementById("playBtn");
 
-    btn.addEventListener("click", () => {
-        music.play();
-        btn.innerHTML = "❤️ Enjoy Your Day ❤️";
-    });
+    btn.addEventListener("click",()=>{
+
+    for(let i=0;i<80;i++){
+
+        setTimeout(()=>{
+
+            let x = Math.random() * canvas.width;
+            let y = Math.random() * (canvas.height / 2);
+
+            ctx.beginPath();
+            ctx.arc(x,y,5,0,Math.PI*2);
+
+            ctx.fillStyle =
+            "hsl(" + Math.random()*360 + ",100%,50%)";
+
+            ctx.fill();
+
+        }, i * 20);
+
+    }
+
+});
 
     // Slideshow
     const slides = document.querySelectorAll(".slide");
