@@ -9,28 +9,34 @@ window.onload = function () {
     const music = document.getElementById("music");
     const btn = document.getElementById("playBtn");
 
-    btn.addEventListener("click",()=>{
+  btn.onclick = function(){
 
-    for(let i=0;i<80;i++){
+    console.log("Fireworks Started");
+
+    for(let i=0; i<100; i++){
+
+        let x = canvas.width / 2;
+        let y = canvas.height / 3;
 
         setTimeout(()=>{
 
-            let x = Math.random() * canvas.width;
-            let y = Math.random() * (canvas.height / 2);
-
             ctx.beginPath();
-            ctx.arc(x,y,5,0,Math.PI*2);
+            ctx.arc(
+                x + (Math.random()*300-150),
+                y + (Math.random()*200-100),
+                4,
+                0,
+                Math.PI*2
+            );
 
-            ctx.fillStyle =
-            "hsl(" + Math.random()*360 + ",100%,50%)";
-
+            ctx.fillStyle = "red";
             ctx.fill();
 
-        }, i * 20);
+        }, i*20);
 
     }
 
-});
+};
 
     // Slideshow
     const slides = document.querySelectorAll(".slide");
@@ -52,6 +58,8 @@ window.onload = function () {
     
 const ctx = canvas.getContext("2d");
 
+    console.log("Canvas:", canvas);
+    
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
     
