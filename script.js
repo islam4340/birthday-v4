@@ -30,6 +30,8 @@ window.onload = function () {
     const petals=document.getElementById("petals");
 
     const canvas = document.getElementById("fireworks");
+    const balloons=document.getElementById("balloons");
+    
 const ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
@@ -99,4 +101,23 @@ ctx.clearRect(0,0,canvas.width,canvas.height);
 }
 
 });
+setInterval(()=>{
+
+const b=document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML=["🎈","🎈","🎈","🎈"][Math.floor(Math.random()*4)];
+
+b.style.left=Math.random()*100+"%";
+
+b.style.animationDuration=(8+Math.random()*5)+"s";
+
+balloons.appendChild(b);
+
+setTimeout(()=>{
+b.remove();
+},13000);
+
+},1200);
 };
