@@ -28,6 +28,12 @@ window.onload = function () {
     const hearts = document.getElementById("hearts");
 
     const petals=document.getElementById("petals");
+
+    const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
     
     setInterval(() => {
 
@@ -70,4 +76,27 @@ petal.remove();
 },10000);
 
 },700);
+btn.addEventListener("click",()=>{
+
+for(let i=0;i<40;i++){
+
+setTimeout(()=>{
+
+const x=Math.random()*canvas.width;
+const y=Math.random()*canvas.height/2;
+
+ctx.beginPath();
+ctx.arc(x,y,3,0,Math.PI*2);
+ctx.fillStyle=`hsl(${Math.random()*360},100%,60%)`;
+ctx.fill();
+
+setTimeout(()=>{
+ctx.clearRect(0,0,canvas.width,canvas.height);
+},400);
+
+},i*80);
+
+}
+
+});
 };
