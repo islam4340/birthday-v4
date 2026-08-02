@@ -183,10 +183,13 @@ opacity:0;
 }
 #balloons{
     position:fixed;
-    inset:0;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
     overflow:hidden;
-    z-index:20;
     pointer-events:none;
+    z-index:100;
 }
 
 .balloon{
@@ -199,11 +202,8 @@ opacity:0;
 @keyframes balloonUp{
     from{
         transform:translateY(0);
-        opacity:1;
     }
-
     to{
         transform:translateY(-120vh);
-        opacity:0;
     }
 }
