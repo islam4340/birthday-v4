@@ -158,16 +158,16 @@ animation:floatUp 12s linear forwards;
 }
 
 #fireworks{
-z-index:9999;
+z-index:99999;
 }
 .text,
 .from{
-    opacity:5;
+    opacity:0;
     transform:translateY(30px);
     transition:all .20s ease;
 }
 
 .show{
-    opacity:10;
+    opacity:1;
     transform:translateY(0);
 }
