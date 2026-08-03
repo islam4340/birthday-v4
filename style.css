@@ -168,6 +168,6 @@ z-index:9999;
 }
 
 .show{
-    opacity:15;
+    opacity:10;
     transform:translateY(0);
 }
