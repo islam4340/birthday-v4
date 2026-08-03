@@ -169,5 +169,5 @@ z-index:9999;
 
 .show{
     opacity:15;
-    transform:translateY(2);
+    transform:translateY(0);
 }
