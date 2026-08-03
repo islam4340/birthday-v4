@@ -76,8 +76,8 @@ width:100%;
 max-width:420px;
 padding:30px;
 border-radius:25px;
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(3px);
+backdrop-filter: none;
+background: transparent;
 border:1px solid rgba(255,255,255,.25);
 text-align:center;
 }
