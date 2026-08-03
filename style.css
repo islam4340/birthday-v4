@@ -162,12 +162,12 @@ z-index:9999;
 }
 .text,
 .from{
-    opacity:5;
-    transform:translateY(30px);
+    opacity:10;
+    transform:translateY(40px);
     transition:all .20s ease;
 }
 
 .show{
-    opacity:10;
-    transform:translateY(0);
+    opacity:15;
+    transform:translateY(2);
 }
