@@ -10,9 +10,8 @@ const music=document.getElementById("music");
 const btn=document.getElementById("playBtn");
 
 btn.onclick=function(){
-
+    
 music.play();
-
 document.querySelectorAll(".text,.from").forEach((el,i)=>{
     setTimeout(()=>{
         el.classList.add("show");
