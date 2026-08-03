@@ -13,6 +13,12 @@ btn.onclick=function(){
 
 music.play();
 
+document.querySelectorAll(".text,.from").forEach((el,i)=>{
+    setTimeout(()=>{
+        el.classList.add("show");
+    }, i*600);
+});
+
 this.innerHTML="❤️ Enjoy Your Day ❤️";
 
     const items = document.querySelectorAll(".hidden");
