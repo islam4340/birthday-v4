@@ -15,6 +15,13 @@ music.play();
 
 this.innerHTML="❤️ Enjoy Your Day ❤️";
 
+    const items = document.querySelectorAll(".hidden");
+
+items.forEach((item, index) => {
+    setTimeout(() => {
+        item.classList.add("show");
+    }, (index + 1) * 900);
+});
 };
 
 // Photo Slider
