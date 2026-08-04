@@ -131,13 +131,12 @@ function resizeCanvas(){
 }
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
-}
+
 btn.addEventListener("click",()=>{
 
     for(let n=0;n<12;n++){
 
         setTimeout(()=>{
-
             flash.style.opacity="0.7";
 setTimeout(()=>flash.style.opacity="0",120);
             
