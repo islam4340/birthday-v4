@@ -137,7 +137,7 @@ btn.addEventListener("click",()=>{
     for(let n=0;n<12;n++){
 
         setTimeout(()=>{
-            
+
             const x=Math.random()*canvas.width;
             const y=Math.random()*(canvas.height*0.5);
 
@@ -166,16 +166,10 @@ btn.addEventListener("click",()=>{
                     p.speed*=0.98;
                     p.life--;
 
-ctx.beginPath();
-ctx.arc(p.x,p.y,2.8,0,Math.PI*2);
-
-ctx.shadowBlur = 20;
-ctx.shadowColor = p.color;
-
-ctx.fillStyle = p.color;
-ctx.fill();
-
-ctx.shadowBlur = 0;
+                    ctx.beginPath();
+                    ctx.arc(p.x,p.y,2.5,0,Math.PI*2);
+                    ctx.fillStyle=p.color;
+                    ctx.fill();
                 });
 
                 if(particles[0].life<=0){
