@@ -168,7 +168,7 @@ btn.addEventListener("click",()=>{
                     p.speed*=0.98;
                     p.life--;
 
-                    ctx.beginPath();
+ctx.beginPath();
 ctx.arc(p.x,p.y,2.8,0,Math.PI*2);
 
 ctx.shadowBlur = 20;
