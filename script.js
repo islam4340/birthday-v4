@@ -137,8 +137,9 @@ btn.addEventListener("click",()=>{
     for(let n=0;n<12;n++){
 
         setTimeout(()=>{
+
+			const
             flash.style.opacity="0.7";
-		setTimeout(()=>flash.style.opacity="0",120);
             
             const x=Math.random()*canvas.width;
             const y=Math.random()*(canvas.height*0.5);
