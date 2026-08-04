@@ -131,40 +131,55 @@ function resizeCanvas(){
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-btn.addEventListener("click", ()=>{
+btn.addEventListener("click",()=>{
 
-    for(let i=0;i<25;i++){
+    for(let n=0;n<12;n++){
 
         setTimeout(()=>{
 
             const x=Math.random()*canvas.width;
             const y=Math.random()*(canvas.height*0.5);
 
-            for(let j=0;j<30;j++){
+            const particles=[];
 
-                const angle=(Math.PI*2/30)*j;
-                const len=20+Math.random()*40;
-
-                ctx.beginPath();
-                ctx.moveTo(x,y);
-                ctx.lineTo(
-                    x+Math.cos(angle)*len,
-                    y+Math.sin(angle)*len
-                );
-                ctx.strokeStyle=`hsl(${Math.random()*360},100%,60%)`;
-                ctx.lineWidth=2;
-                ctx.stroke();
+            for(let i=0;i<80;i++){
+                particles.push({
+                    x:x,
+                    y:y,
+                    angle:(Math.PI*2/80)*i,
+                    speed:2+Math.random()*5,
+                    life:60,
+                    color:`hsl(${Math.random()*360},100%,60%)`
+                });
             }
 
-            setTimeout(()=>{
-                ctx.clearRect(0,0,canvas.width,canvas.height);
-            },1000);
+            let animation=setInterval(()=>{
 
-        },i*500);
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+
+                particles.forEach(p=>{
+
+                    p.x+=Math.cos(p.angle)*p.speed;
+                    p.y+=Math.sin(p.angle)*p.speed;
+
+                    p.speed*=0.98;
+                    p.life--;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x,p.y,2.5,0,Math.PI*2);
+                    ctx.fillStyle=p.color;
+                    ctx.fill();
+                });
+
+                if(particles[0].life<=0){
+                    clearInterval(animation);
+                    ctx.clearRect(0,0,canvas.width,canvas.height);
+                }
+
+            },16);
+
+        },n*500);
 
     }
 
 });
-
-// শেষ
-};
