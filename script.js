@@ -170,9 +170,15 @@ setTimeout(()=>flash.style.opacity="0",120);
                     p.life--;
 
                     ctx.beginPath();
-                    ctx.arc(p.x,p.y,2.5,0,Math.PI*2);
-                    ctx.fillStyle=p.color;
-                    ctx.fill();
+ctx.arc(p.x,p.y,2.8,0,Math.PI*2);
+
+ctx.shadowBlur = 20;
+ctx.shadowColor = p.color;
+
+ctx.fillStyle = p.color;
+ctx.fill();
+
+ctx.shadowBlur = 0;
                 });
 
                 if(particles[0].life<=0){
