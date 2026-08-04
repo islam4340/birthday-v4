@@ -131,7 +131,7 @@ function resizeCanvas(){
 }
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
-
+}
 btn.addEventListener("click",()=>{
 
     for(let n=0;n<12;n++){
