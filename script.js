@@ -122,6 +122,7 @@ b.remove();
 },1200);
 // Fireworks
 const canvas = document.getElementById("fireworks");
+const flash = document.getElementById("flash");
 const ctx = canvas.getContext("2d");
 
 function resizeCanvas(){
