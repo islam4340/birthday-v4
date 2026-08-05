@@ -18,7 +18,7 @@ document.querySelectorAll(".text,.from").forEach((el,i)=>{
     }, i*600);
 });
 
-this.innerHTML="❤️ Enjoy Your Day ❤️";
+this.innerHTML="❤️ love you বউজান ❤️";
 
     const items = document.querySelectorAll(".hidden");
 
